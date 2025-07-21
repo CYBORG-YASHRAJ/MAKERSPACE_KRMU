@@ -155,7 +155,7 @@ export default function Footer() {
                   <div className="relative w-full h-full bg-white/10 rounded-full border-2 border-white/20 group-hover:border-cyan-400/50 transition-all duration-300 overflow-hidden shadow-lg">
                     {/* Placeholder for Yashraj's photo */}
                     <Image
-                      src="/placeholder-user.jpg"
+                      src="/placeholder.jpg"
                       alt="Yashraj Pahuja Photo"
                       width={144}
                       height={144}
@@ -174,7 +174,7 @@ export default function Footer() {
                   <div className="relative w-full h-full bg-white/10 rounded-full border-2 border-white/20 group-hover:border-blue-400/50 transition-all duration-300 overflow-hidden shadow-lg">
                     {/* Placeholder for Piyush's photo */}
                     <Image
-                      src="/placeholder-user.jpg"
+                      src="/placeholder.jpg"
                       alt="Piyush Sharma Photo"
                       width={144}
                       height={144}

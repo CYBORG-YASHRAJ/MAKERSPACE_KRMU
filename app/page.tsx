@@ -17,8 +17,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-white/40"></div>
         
         <div className="relative container mx-auto px-4 py-8 sm:py-16 lg:py-32 w-full">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="space-y-6 sm:space-y-8 lg:space-y-10 text-center lg:text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+            <div className="space-y-6 sm:space-y-8 lg:space-y-10 text-center lg:text-left order-1 lg:order-1">
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex justify-center lg:justify-start mb-4 sm:mb-6">
                   <div className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-blue-100/80 backdrop-blur-sm rounded-full border border-blue-200/50 text-xs sm:text-sm text-blue-700 font-medium shadow-sm max-w-full">
@@ -27,21 +27,21 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-gray-900">
-                  <div className="flex flex-col items-center lg:items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold leading-tight tracking-tight text-gray-900">
+                  <div className="flex flex-col items-center lg:items-start gap-2 sm:gap-3 lg:gap-4 mb-3 sm:mb-4">
                     {/* Makerspace Logo */}
                     <div className="relative group flex-shrink-0">
-                      <div className="bg-white/90 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-3 sm:p-4 lg:p-6 shadow-lg border border-gray-200/50 group-hover:bg-white transition-all duration-300 group-hover:shadow-xl">
+                      <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl lg:rounded-3xl p-2 sm:p-3 lg:p-4 xl:p-6 shadow-lg border border-gray-200/50 group-hover:bg-white transition-all duration-300 group-hover:shadow-xl">
                         <Image
                           src="/makerspace logo.jpg"
                           alt="MAKERSPACE Logo"
-                          width={80}
-                          height={80}
-                          className="object-contain transition-transform duration-300 group-hover:scale-105 sm:w-[100px] sm:h-[100px] lg:w-[120px] lg:h-[120px]"
+                          width={60}
+                          height={60}
+                          className="object-contain transition-transform duration-300 group-hover:scale-105 sm:w-[80px] sm:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px]"
                         />
                       </div>
                       {/* Subtle glow effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-indigo-500/20 rounded-2xl sm:rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-indigo-500/20 rounded-xl sm:rounded-2xl lg:rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     
                     {/* MAKERSPACE Text */}
@@ -50,11 +50,11 @@ export default function HomePage() {
                       <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
                     </span>
                   </div>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mt-3 sm:mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-light">
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mt-2 sm:mt-3 lg:mt-4 text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-light leading-tight">
                     Where Ideas Come to Life
                   </span>
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-700 max-w-2xl leading-relaxed mx-auto lg:mx-0 px-2 sm:px-0">
                   Empowering students to create, innovate, and build the future through cutting-edge technology,
                   collaborative learning, and hands-on experimentation in robotics, AI, and IoT.
                 </p>
@@ -99,19 +99,20 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative lg:justify-self-end mt-8 lg:mt-0 order-first lg:order-last">
+            <div className="relative lg:justify-self-end mt-8 lg:mt-0 order-2 lg:order-2">
               <div className="relative">
                 {/* Floating Elements - Hidden on small screens for better performance */}
-                <div className="hidden sm:block absolute -top-2 -left-2 sm:-top-4 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl sm:rounded-2xl rotate-12 opacity-60 animate-float"></div>
-                <div className="hidden sm:block absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-32 lg:h-32 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl sm:rounded-2xl -rotate-12 opacity-60 animate-float-delayed"></div>
+                <div className="hidden md:block absolute -top-2 -left-2 md:-top-4 md:-left-4 w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl md:rounded-2xl rotate-12 opacity-60 animate-float"></div>
+                <div className="hidden md:block absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 w-16 h-16 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl md:rounded-2xl -rotate-12 opacity-60 animate-float-delayed"></div>
                 
-                <div className="bg-white/90 backdrop-blur-lg rounded-xl sm:rounded-2xl lg:rounded-3xl p-3 sm:p-4 lg:p-8 shadow-xl border border-gray-200/50 relative z-10">
+                <div className="bg-white/90 backdrop-blur-lg rounded-xl sm:rounded-2xl lg:rounded-3xl p-3 sm:p-4 lg:p-8 shadow-xl border border-gray-200/50 relative z-10 max-w-md mx-auto lg:max-w-none">
                   <Image
                     src="/Font.jpg"
                     alt="MAKERSPACE facility and equipment"
                     width={500}
                     height={400}
                     className="rounded-lg sm:rounded-xl lg:rounded-2xl shadow-lg object-cover w-full h-auto"
+                    priority
                   />
                 </div>
               </div>
