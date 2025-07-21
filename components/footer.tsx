@@ -17,8 +17,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-xl shadow-lg">
-                <Cpu className="h-8 w-8 text-white" />
+              <div className="bg-white/10 backdrop-blur-sm p-2 rounded-xl shadow-lg border border-white/20">
+                <Image
+                  src="/makerspace logo.jpg"
+                  alt="MAKERSPACE Logo"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">MAKERSPACE</span>
             </div>
@@ -157,7 +163,8 @@ export default function Footer() {
                   </div>
                 </div>
                 <h4 className="text-white font-bold text-base lg:text-lg mb-2">YASHRAJ PAHUJA</h4>
-                <p className="text-cyan-400 text-sm lg:text-base font-medium mb-4">Developer</p>
+                <p className="text-cyan-400 text-sm lg:text-base font-medium mb-2">Developer</p>
+                <p className="text-gray-400 text-xs lg:text-sm mb-4">B.Tech CSE (AI & ML)</p>
                 
                 {/* LinkedIn Button */}
                 <Link 
@@ -187,7 +194,8 @@ export default function Footer() {
                   </div>
                 </div>
                 <h4 className="text-white font-bold text-base lg:text-lg mb-2">PIYUSH SHARMA</h4>
-                <p className="text-blue-400 text-sm lg:text-base font-medium mb-4">Developer</p>
+                <p className="text-blue-400 text-sm lg:text-base font-medium mb-2">Developer</p>
+                <p className="text-gray-400 text-xs lg:text-sm mb-4">B.Tech CSE (AI & ML)</p>
                 
                 {/* LinkedIn Button */}
                 <Link 
