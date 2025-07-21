@@ -247,6 +247,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Page spacing utility for fixed navigation */
+.page-spacing {
+  padding-top: 6rem; /* 96px - accounts for fixed navigation height */
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

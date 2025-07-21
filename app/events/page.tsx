@@ -120,12 +120,12 @@ export default function EventsPage() {
   }
 
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen pt-24 py-12">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Events & Workshops</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">Events & Workshops</h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Join our community events, workshops, and competitions to enhance your skills and connect with fellow
             innovators.
           </p>
@@ -133,12 +133,12 @@ export default function EventsPage() {
 
         {/* Upcoming Events */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Upcoming Events</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Upcoming Events</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {upcomingEvents.map((event) => (
               <Card
                 key={event.id}
-                className="border-0 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-shadow"
+                className="border-0 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative">
                   <div className="absolute inset-0 bg-black/20"></div>
@@ -150,9 +150,9 @@ export default function EventsPage() {
                   <CardTitle className="text-xl">{event.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-600 text-sm">{event.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">{event.description}</p>
 
-                  <div className="space-y-2 text-sm text-gray-500">
+                  <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
                     <div className="flex items-center">
                       <Calendar className="h-4 w-4 mr-2" />
                       {new Date(event.date).toLocaleDateString("en-US", {
@@ -176,7 +176,9 @@ export default function EventsPage() {
                     </div>
                   </div>
 
-                  <Button className="w-full rounded-xl">Register Now</Button>
+                  <Button className="w-full rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                    Register Now
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -185,10 +187,10 @@ export default function EventsPage() {
 
         {/* Past Events */}
         <section>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Past Events</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Past Events</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pastEvents.map((event) => (
-              <Card key={event.id} className="border-0 shadow-md rounded-2xl">
+              <Card key={event.id} className="border-0 shadow-md rounded-2xl hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <CardTitle className="text-lg">{event.title}</CardTitle>
@@ -198,8 +200,8 @@ export default function EventsPage() {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <p className="text-gray-600 text-sm">{event.description}</p>
-                  <div className="flex justify-between items-center text-sm text-gray-500">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">{event.description}</p>
+                  <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
                     <div className="flex items-center">
                       <Calendar className="h-4 w-4 mr-2" />
                       {new Date(event.date).toLocaleDateString()}

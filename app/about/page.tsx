@@ -4,7 +4,7 @@ import { Wrench, Lightbulb, Users, Target } from "lucide-react"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="min-h-screen pt-24 py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

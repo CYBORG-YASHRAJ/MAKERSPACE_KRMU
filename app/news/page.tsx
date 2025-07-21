@@ -122,7 +122,7 @@ export default function NewsPage() {
   const regularNews = newsItems.filter((item) => !item.featured)
 
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen pt-24 py-12">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

@@ -9,17 +9,18 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "MAKERSPACE",
+  title: "MAKERSPACE - K.R Mangalam University",
   description:
-    "Empowering students to create, innovate, and build the future through cutting-edge technology, collaborative learning, and hands-on experimentation in robotics, AI, and IoT.",
-  keywords: "makerspace, innovation lab, university, robotics, AI, IoT, 3D printing, Arduino, Raspberry Pi",
+    "Makerspace - K.R Mangalam University. Empowering students to create, innovate, and build the future through cutting-edge technology, collaborative learning, and hands-on experimentation in robotics, AI, and IoT.",
+  keywords: "makerspace, K.R Mangalam University, KRMU, innovation lab, university, robotics, AI, IoT, 3D printing, Arduino, Raspberry Pi",
   generator: 'v0.dev',
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/makerspace logo.jpg', sizes: '32x32', type: 'image/jpeg' },
       { url: '/makerspace logo 1.png', sizes: '16x16', type: 'image/png' },
     ],
-    shortcut: '/makerspace logo.jpg',
+    shortcut: '/favicon.ico',
     apple: '/makerspace logo.jpg',
     other: {
       rel: 'apple-touch-icon-precomposed',
