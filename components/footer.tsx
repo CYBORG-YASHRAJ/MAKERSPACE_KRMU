@@ -1,13 +1,6 @@
 import Link from "next/link"
-import { Cpu, Mail, Phone, MapPin } from "lucide-react"
+import { Cpu, Mail, Phone, MapPin, Linkedin } from "lucide-react"
 import Image from 'next/image';
-
-<Image
-  src="/makerspace-logo.png"
-  alt="Makerspace Logo"
-  width={150}
-  height={150}
-/>
 
 
 export default function Footer() {
@@ -30,7 +23,7 @@ export default function Footer() {
               <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">MAKERSPACE</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Empowering students to create, innovate, and build the future through cutting-edge technology and
+              MAKERSPACE - K.R. Mangalam University. Empowering students to create, innovate, and build the future through cutting-edge technology and
               collaborative learning experiences.
             </p>
             <div className="flex space-x-4">
@@ -153,9 +146,9 @@ export default function Footer() {
                 <div className="relative mb-6 mx-auto w-28 h-28 lg:w-36 lg:h-36">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300 animate-pulse"></div>
                   <div className="relative w-full h-full bg-white/10 rounded-full border-2 border-white/20 group-hover:border-cyan-400/50 transition-all duration-300 overflow-hidden shadow-lg">
-                    {/* Placeholder for Yashraj's photo */}
+                    {/* Yashraj's photo */}
                     <Image
-                      src="/placeholder.jpg"
+                      src="/yashraj.jpg"
                       alt="Yashraj Pahuja Photo"
                       width={144}
                       height={144}
@@ -164,7 +157,18 @@ export default function Footer() {
                   </div>
                 </div>
                 <h4 className="text-white font-bold text-base lg:text-lg mb-2">YASHRAJ PAHUJA</h4>
-                <p className="text-cyan-400 text-sm lg:text-base font-medium">Developer</p>
+                <p className="text-cyan-400 text-sm lg:text-base font-medium mb-4">Developer</p>
+                
+                {/* LinkedIn Button */}
+                <Link 
+                  href="https://www.linkedin.com/in/yashraj-pahuja-28a34b325/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  <span>LinkedIn</span>
+                </Link>
               </div>
 
               {/* Developer 2 - Piyush Sharma */}
@@ -172,9 +176,9 @@ export default function Footer() {
                 <div className="relative mb-6 mx-auto w-28 h-28 lg:w-36 lg:h-36">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300 animate-pulse"></div>
                   <div className="relative w-full h-full bg-white/10 rounded-full border-2 border-white/20 group-hover:border-blue-400/50 transition-all duration-300 overflow-hidden shadow-lg">
-                    {/* Placeholder for Piyush's photo */}
+                    {/* Piyush's photo */}
                     <Image
-                      src="/placeholder.jpg"
+                      src="/piyush.png"
                       alt="Piyush Sharma Photo"
                       width={144}
                       height={144}
@@ -183,7 +187,18 @@ export default function Footer() {
                   </div>
                 </div>
                 <h4 className="text-white font-bold text-base lg:text-lg mb-2">PIYUSH SHARMA</h4>
-                <p className="text-blue-400 text-sm lg:text-base font-medium">Developer</p>
+                <p className="text-blue-400 text-sm lg:text-base font-medium mb-4">Developer</p>
+                
+                {/* LinkedIn Button */}
+                <Link 
+                  href="https://www.linkedin.com/in/piyush-078455221/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  <span>LinkedIn</span>
+                </Link>
               </div>
             </div>
           </div>
