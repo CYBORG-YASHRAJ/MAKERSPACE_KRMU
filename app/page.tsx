@@ -17,24 +17,6 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-white/40"></div>
         
         <div className="relative container mx-auto px-4 py-16 sm:py-20 lg:py-32">
-          {/* KRMU Logo Section - Light Theme */}
-          <div className="flex justify-center mb-12 sm:mb-16">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center mb-4">
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-gray-200/50 hover:bg-white/90 transition-all duration-500 shadow-lg">
-                  <Image
-                    src="/KRMU.png"
-                    alt="KR Mangalam University Logo"
-                    width={200}
-                    height={100}
-                    className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-500 rounded-lg sm:rounded-xl sm:w-[240px] sm:h-[120px]"
-                  />
-                </div>
-              </div>
-              <div className="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent mx-auto"></div>
-            </div>
-          </div>
-
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="space-y-8 lg:space-y-10">
               <div className="space-y-6">

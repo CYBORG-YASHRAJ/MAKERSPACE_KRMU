@@ -164,7 +164,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <h4 className="text-white font-bold text-base lg:text-lg mb-2">YASHRAJ PAHUJA</h4>
-                <p className="text-cyan-400 text-sm lg:text-base font-medium">Lead Developer</p>
+                <p className="text-cyan-400 text-sm lg:text-base font-medium">Developer</p>
               </div>
 
               {/* Developer 2 - Piyush Sharma */}
@@ -183,7 +183,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <h4 className="text-white font-bold text-base lg:text-lg mb-2">PIYUSH SHARMA</h4>
-                <p className="text-blue-400 text-sm lg:text-base font-medium">Co-Developer</p>
+                <p className="text-blue-400 text-sm lg:text-base font-medium">Developer</p>
               </div>
             </div>
           </div>

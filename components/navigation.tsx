@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Home, Info, Calendar, Newspaper, Image, AlertCircle, Phone } from "lucide-react"
+import { Menu, X, Home, Info, Calendar, Newspaper, Image as ImageIcon, AlertCircle, Phone } from "lucide-react"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +17,7 @@ export default function Navigation() {
     { name: "About", href: "/about", icon: Info },
     { name: "Events", href: "/events", icon: Calendar },
     { name: "News", href: "/news", icon: Newspaper },
-    { name: "Gallery", href: "/gallery", icon: Image },
+    { name: "Gallery", href: "/gallery", icon: ImageIcon },
     { name: "Report Issue", href: "/issues", icon: AlertCircle },
     { name: "Contact", href: "/contact", icon: Phone },
   ]
@@ -84,7 +85,26 @@ export default function Navigation() {
             isScrolled ? 'opacity-0 h-0 overflow-hidden scale-90 transform -translate-y-4' : 'opacity-100 scale-100 transform translate-y-0'
           }`}>
             <div className="container mx-auto px-4">
-              <div className="flex justify-center items-center h-20">
+              <div className="flex justify-between items-center h-20">
+                {/* KRMU Logo */}
+                <div className="flex items-center">
+                  <Link href="/" className="group flex items-center space-x-3 transition-all duration-300 hover:scale-105">
+                    <div className="relative overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 group-hover:bg-white/20 transition-all duration-300">
+                      <Image
+                        src="/KRMU1.jpeg"
+                        alt="KR Mangalam University"
+                        width={40}
+                        height={20}
+                        className="object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                      />
+                    </div>
+                    <div className="hidden lg:block">
+                      <span className="text-white font-semibold text-sm">K.R MANGALAM UNIVERSITY</span>
+                      <div className="text-cyan-300 text-xs">MAKERSPACE</div>
+                    </div>
+                  </Link>
+                </div>
+
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center space-x-2">
                   {navigation.map((item) => (
@@ -147,39 +167,59 @@ export default function Navigation() {
               {/* Desktop Dynamic Island */}
               <div className="hidden md:block">
                 {!isOpen ? (
-                  // Collapsed state - shows navigation with names
-                  <div className="flex items-center space-x-3">
-                    {navigation.map((item, index) => {
-                      const IconComponent = item.icon
-                      return (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-110 group relative overflow-hidden ${
-                            isActive(item.href)
-                              ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg shadow-cyan-500/40 scale-105"
-                              : "text-white/90 hover:text-white hover:bg-gradient-to-r hover:from-blue-600/40 hover:to-purple-600/40 hover:backdrop-blur-sm hover:shadow-lg hover:shadow-blue-500/20"
-                          }`}
-                          style={{
-                            animationDelay: `${index * 100}ms`
-                          }}
-                        >
-                          {/* Ripple effect */}
-                          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400/20 to-blue-500/20 scale-0 group-hover:scale-100 transition-transform duration-500 ease-out"></div>
-                          
-                          <IconComponent className={`h-4 w-4 transition-all duration-300 ${isActive(item.href) ? 'animate-pulse' : 'group-hover:rotate-12'}`} />
-                          <span className="whitespace-nowrap relative z-10">{item.name}</span>
-                          
-                          {/* Active indicator */}
-                          {isActive(item.href) && (
-                            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400/10 to-blue-500/10 animate-pulse"></div>
-                          )}
-                          
-                          {/* Hover glow effect */}
-                          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </Link>
-                      )
-                    })}
+                  // Collapsed state - shows logo and navigation with names
+                  <div className="flex items-center space-x-4">
+                    {/* KRMU Logo in Dynamic Island */}
+                    <Link href="/" className="group flex items-center space-x-2 transition-all duration-300 hover:scale-105">
+                      <div className="relative overflow-hidden rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 p-1.5 group-hover:bg-white/20 transition-all duration-300">
+                        <Image
+                          src="/KRMU1.jpeg"
+                          alt="KRMU"
+                          width={24}
+                          height={12}
+                          className="object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                        />
+                      </div>
+                      <span className="text-white text-xs font-medium hidden xl:block">KRMU</span>
+                    </Link>
+                    
+                    {/* Separator */}
+                    <div className="w-px h-6 bg-white/20"></div>
+                    
+                    {/* Navigation Items */}
+                    <div className="flex items-center space-x-3">
+                      {navigation.map((item, index) => {
+                        const IconComponent = item.icon
+                        return (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-110 group relative overflow-hidden ${
+                              isActive(item.href)
+                                ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg shadow-cyan-500/40 scale-105"
+                                : "text-white/90 hover:text-white hover:bg-gradient-to-r hover:from-blue-600/40 hover:to-purple-600/40 hover:backdrop-blur-sm hover:shadow-lg hover:shadow-blue-500/20"
+                            }`}
+                            style={{
+                              animationDelay: `${index * 100}ms`
+                            }}
+                          >
+                            {/* Ripple effect */}
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400/20 to-blue-500/20 scale-0 group-hover:scale-100 transition-transform duration-500 ease-out"></div>
+                            
+                            <IconComponent className={`h-4 w-4 transition-all duration-300 ${isActive(item.href) ? 'animate-pulse' : 'group-hover:rotate-12'}`} />
+                            <span className="whitespace-nowrap relative z-10">{item.name}</span>
+                            
+                            {/* Active indicator */}
+                            {isActive(item.href) && (
+                              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400/10 to-blue-500/10 animate-pulse"></div>
+                            )}
+                            
+                            {/* Hover glow effect */}
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          </Link>
+                        )
+                      })}
+                    </div>
                   </div>
                 ) : (
                   // This state won't be used since we're showing all items by default now
