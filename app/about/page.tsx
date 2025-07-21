@@ -4,13 +4,13 @@ import { Wrench, Lightbulb, Users, Target } from "lucide-react"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">About Our Innovation Lab</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">About MAKERSPACE</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A cutting-edge makerspace dedicated to fostering creativity, innovation, and hands-on learning in technology
+            K.R. Mangalam University's cutting-edge makerspace dedicated to fostering creativity, innovation, and hands-on learning in technology
             and engineering.
           </p>
         </div>
