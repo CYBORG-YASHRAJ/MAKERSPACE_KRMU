@@ -20,9 +20,11 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="space-y-6 sm:space-y-8 lg:space-y-10 text-center lg:text-left">
               <div className="space-y-4 sm:space-y-6">
-                <div className="inline-flex items-center px-3 py-2 sm:px-4 bg-blue-100/80 backdrop-blur-sm rounded-full border border-blue-200/50 text-xs sm:text-sm text-blue-700 font-medium mb-4 sm:mb-6">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
-                  Welcome to the Future of Innovation
+                <div className="flex justify-center lg:justify-start mb-4 sm:mb-6">
+                  <div className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-blue-100/80 backdrop-blur-sm rounded-full border border-blue-200/50 text-xs sm:text-sm text-blue-700 font-medium shadow-sm max-w-full">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse flex-shrink-0"></span>
+                    <span className="text-center whitespace-nowrap overflow-hidden text-ellipsis">Welcome to the Future of Innovation</span>
+                  </div>
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-gray-900">
